@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+
+  app:
+    build: .
+    container_name: news-feed-frontend-app
+    working_dir: /app/frontend
+    command: bash -c '. ~/.bashrc && pnpm start'
+    networks:
+      - assessment-network
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend-server
+    environment:
+      APP_ENV: development
+  # PHP service
+  backend-server:
+    build: .
+    container_name: news-feed-backend-server
+    working_dir: /app/backend
+    command: php artisan serve --host 0.0.0.0:8000
+    networks:
+      - assessment-network
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      APP_ENV: development
+
+  # MySQL database service
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    container_name: news-feed-mysql-db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: assessment
+      MYSQL_USER: assessment
+      MYSQL_PASSWORD: password
+    networks:
+      - assessment-network
+networks:
+  assessment-network:
+    driver: bridge
