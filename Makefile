@@ -1,6 +1,3 @@
-echo: ## generate the swagger.yaml file
-	echo ''
-
 provision:
 	docker-compose up -d backend-server
 	docker-compose exec -T backend-server bash -c 'cd /app/backend && php artisan migrate'
