@@ -3,7 +3,7 @@
 ## Prerequisites
 Before you begin, ensure you have the following tools installed on your machine:
 
-- [Solution Walkthrough](https://drive.google.com/file/d/1fJkIw-_wzUY4vzbPtJFXKWTP0kkR1efl/view?usp=sharing) This video contains detailed walkthrough of the solution.
+- [Solution Walkthrough](https://drive.google.com/file/d/1QScjqhNzMCDlStRB6oRozHBxMB1kBCv4/view?usp=sharing) This video contains detailed walkthrough of the solution.
 - [Docker Desktop](https://www.docker.com/products/docker-desktop): Required to orchestrate and run the containers for the project. Installation guides are available for [Windows](https://docs.docker.com/desktop/windows/install/), [Mac](https://docs.docker.com/desktop/mac/install/), and [Linux](https://docs.docker.com/desktop/linux/install/).
 - [Docker Compose](https://docs.docker.com/compose/install/): Utilized within Docker Desktop but may require separate installation on Linux.
 - [Make](https://www.gnu.org/software/make/): A build automation tool used to manage the project with simple commands. Installation guide is available [here](https://www.gnu.org/software/make/).

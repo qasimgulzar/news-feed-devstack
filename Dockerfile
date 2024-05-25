@@ -16,7 +16,7 @@ RUN export PATH=~/.composer/vendor/bin:$PATH
 RUN mkdir -p /app/backend
 RUN mkdir -p /app/frontend
 
-ARG CACHEBUST=2
+ARG CACHEBUST=100
 
 RUN git clone https://github.com/qasimgulzar/news-feed-backend-laravel.git /app/backend
 RUN git clone https://github.com/qasimgulzar/news-feed-frontend-react.git /app/frontend
