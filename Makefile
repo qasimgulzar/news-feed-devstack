@@ -1,5 +1,5 @@
 provision:
-	docker-compose up -d backend-server && source ./check-db-status.sh
+	docker-compose up -d backend-server && . ./check-db-status.sh
 	docker-compose exec -T backend-server bash -c 'cd /app/backend && php artisan migrate'
 
 runserver:
